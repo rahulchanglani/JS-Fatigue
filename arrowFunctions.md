@@ -2,7 +2,7 @@ Arrow Functions in  JS (ES6)
 ================
 
 
-# Benefit #1: Shorter Syntax
+### Benefit #1: Shorter Syntax
 
 Lets take a look at a regular function:
 
@@ -66,7 +66,7 @@ double(3);
 ```
 
 
-# Benefit #2: No binding of this
+### Benefit #2: No binding of this
 
 Before we move on, you should have a good understanding of the keyword this and how it works. If you want to learn, or need a refresher, read my post on the subject before continuing.
 Unlike a regular function, an arrow function does not bind this. Instead, this is bound lexically (i.e. this keeps its meaning from its original context).
