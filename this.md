@@ -13,47 +13,56 @@ Alright, we got the definition out of the way, now lets back up for a minute. Op
 
 ```javascript
 console.log(this);
-```
-What do you get?
-```
 // Window {...}
 ```
+
 The window object! That’s because in the global scope, this refers to the global object. In a browser, the global object is the window object.
 
 To help you better understand why this refers to the window object, let’s look at it more in depth. In your console, create a new variable and assign it to your name:
+
 ```javascript
 var myName = 'Brandon';
 ```
+
 We can access this new variable again by calling it:
+
 ```javascript
 myName
 // returns -> 'Brandon'
 ```
+
 But did you know that every variable you declare in the global scope is attached to the window object? Lets test this:
+
 ```javascript
 window.myName
 // returns -> 'Brandon'
 window.myName === myName
 // returns -> true
 ```
+
 Cool. So earlier when we ran console.log(this) in global context, we know that this was being called on the global object. Since the global object in the browser is the window object, it makes sense that:
+
 ```javascript
 console.log(this)
 // returns -> window{...}
 ```
+
 Now lets put this inside of a function. Recall our earlier definition: The value of this is usually determined by how a function is called. With that in mind, what do you expect this function to return? In your browser console, copy the code below and hit enter.
+
 ```javascript
 function test() {
   return this;
 }
 test()
 ```
+
 Once again, the keyword this returns to global (window) object. This happens because the keyword this is not inside of a declared object, so it defaults to the global (window) object. This concept may be a little tough to understand right now, but it should make more sense as you read on. One thing to note, if you are using strict mode, in the above example this will be undefined
 
 
 ### 2 Declared Object
 
 When the keyword this is used inside of a declared object, the value of this is set to the closest parent object the method is called on. Take a look at the code below where I declare the object person and use this inside the method full
+
 ```javascript
 var person = {
   first: 'John',
@@ -65,7 +74,9 @@ var person = {
 person.full();
 // logs => 'John Smith'
 ```
+
 To better illustrate that this is in fact referencing the person object, copy the below code into your browser console. It’s mostly the same code as above, we’re just going to console.log(this) instead, so we can see what it returns.
+
 ```javascript
 var person = {
   first: 'John',

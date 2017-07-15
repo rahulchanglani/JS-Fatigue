@@ -181,7 +181,7 @@ clearInterval(b.timer);
 ## Conclusion
 
 Hopefully this article helped you see the two main benefits of arrow functions:
-> Shorter Syntax
-> No binding of this
+>1. Shorter Syntax
+>2. No binding of this
 
 As a disclaimer, there is more to arrow functions than what was explained in this article. But this should give you a great base of knowledge for further learning! As always, leave a comment if you have any great resources on the subject for others to explore.
