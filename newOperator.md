@@ -75,7 +75,7 @@ Student.prototype.constructor;
 ```
 This is getting complicated very quickly. Lets see if a crappy paint image doesn’t help you visualize what is going on:
 
-[It’s beautiful, isn’t it?](https://cdn-images-1.medium.com/max/800/1*RIY6LBqQAbXPzMXMwH5d-Q.png)
+![Prototype](https://cdn-images-1.medium.com/max/800/1*RIY6LBqQAbXPzMXMwH5d-Q.png "prototype js")
 
 As you can see above, our Student constructor function (as well as all other constructor functions) have a property called .prototype. This prototype has an object on it called .constructor which points back to the constructor function. It’s a nice little loop. Then, when we use the new operator to create a new object, each object has .__proto__ property which links the new object back to the Student.prototype.
 

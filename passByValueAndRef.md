@@ -10,7 +10,7 @@ In order to understand passing by reference and by value you must first be aware
 
 Interestingly enough the equals operator plays a huge role in how value and reference work. When creating a variable the equals operator will notice that you are assigning that variable a primitive value (or object) and act accordingly. I’m going to refer to the picture below in the following text to help give a visualization of what is going on..
 
-[Anthony Alicea — Udemy.com](https://cdn-images-1.medium.com/max/800/1*nZpsZjDatEzXw5PZP2hGUA.png)
+![Pass by Value](https://cdn-images-1.medium.com/max/800/1*nZpsZjDatEzXw5PZP2hGUA.png "Pass by val")
 
 When assigning a variable (a) a primitive value the equals operator sets up a location (address) in memory (represented by 0x001 in the picture) to store the information and points the variable (a) to that address. When you create a new variable (b in this case) and assign it the value of another variable (a) the equals operator creates ANOTHER spot in memory separate from the original variable (represented by 0x002 in the picture) and places of copy of (a) in the new variables spot in memory. So, by value copies the value of the original variable (a) into two separate spots in memory. Being unaware of this can cause some interesting interactions, lets take a look below:
 
@@ -37,7 +37,7 @@ In sum, by value copies the value into two separate spots in memory effectively 
 
 Passing by reference relates to objects in Javascript (ALL objects including functions). Like before im going to utilize the picture below as a visual representation of what we’ll be discussing.
 
-[Anthony Alicea — Udemy.com](https://cdn-images-1.medium.com/max/800/1*t1Jjp3moTD1KCA75Kd_PSA.png)
+![Pass by Reference](https://cdn-images-1.medium.com/max/800/1*t1Jjp3moTD1KCA75Kd_PSA.png  "Pass by Ref")
 
 As you can see above when a variable (a) is set equal to an object the equals operator identifies that the value is an object, creates a new location in memory, and points (a) to the address (represented by 0x001). When we create a new variable (b) and assign it the value of variable (a) the equals operator knows we are dealing with an object and points it to the same address that (a) points to. Notice that no new location or object in memory is created (like in pass by value), rather variable (b) is simply pointed to the same address that variable (a) was pointed to. This too can lead to some interested interactions if you dont know how things work, lets take a look at the example below:
 

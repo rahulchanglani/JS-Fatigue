@@ -79,7 +79,7 @@ t.next().value; // undefined c
 
 If next is triggered with no argument, it will act as undefined is passed in. That is why you get undefined c in the last call.
 
-[generator_01](https://cdn-images-1.medium.com/max/800/1*iHA2OYIL-SJ21dKL8PRtRg.png)
+![generator_01](https://cdn-images-1.medium.com/max/800/1*iHA2OYIL-SJ21dKL8PRtRg.png "Generator 01")
 
 Let’s modify it a bit to have different returned values.
 
@@ -124,7 +124,7 @@ f.next('now complete');
 
 See screen dump below for annotations.
 
-[generator_02](https://cdn-images-1.medium.com/max/800/1*2qkWHH-NgnFrXt1o9FMJOw.png)
+![generator_02](https://cdn-images-1.medium.com/max/800/1*2qkWHH-NgnFrXt1o9FMJOw.png "Generator 02")
 
 Code snippet below shows that only the yielded value is replaced, not the whole statement evaluated value.
 
