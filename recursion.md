@@ -146,9 +146,9 @@ revStr('cat');
 
 Instantly you can (ideally) notice a few things:
 
->1.str === "" is our base case. When our string has no characters in it, we’ve succeeded.
->2.return revStr(str.substr(1)) + str[0]; is where the recursion magic happens.
->3.There is no termination case. That’s because in this instance our base case is our termination case. We can’t get a string that has negative characters. so as long as only strings are entered into our function we will be fine.
+>1. str === "" is our base case. When our string has no characters in it, we’ve succeeded.
+>2. return revStr(str.substr(1)) + str[0]; is where the recursion magic happens.
+>3. There is no termination case. That’s because in this instance our base case is our termination case. We can’t get a string that has negative characters. so as long as only strings are entered into our function we will be fine.
 
 
 #### Let’s break it down line by line

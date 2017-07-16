@@ -4,10 +4,10 @@ new Operator
 ### The Four Rules.
 
 The simplest way to understand the new operator is to understand what it does. When you use new, four things happen:
->1.It creates a new, empty object.
->2.It binds this to our newly created object.
->3.It adds a property onto our newly created object called “__proto__” which points to the constructor function’s prototype object.
->4.It adds a return this to the end of the function, so that the object that is created is returned from the function.
+>1. It creates a new, empty object.
+>2. It binds this to our newly created object.
+>3. It adds a property onto our newly created object called “__proto__” which points to the constructor function’s prototype object.
+>4. It adds a return this to the end of the function, so that the object that is created is returned from the function.
 
 ### Wait, What?
 
